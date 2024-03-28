@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<h1 class="mt-5">WELCOME BACK!</h1>
+<form action="/query">
+
+    <button class="btn btn-primary m-3" type="submit">Add Query</button>
+
+</form>
+<!-- <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="answer" type="text" size="70"> -->
+
+<!-- <form action="/erase" method="post"> -->
+    <div>
+        <table style="width:100%">
+            <thead style="width:100%">
+                <tr>
+                    <th style="width:80px">ID</th>
+                    <th style="width:160px">Category</th>
+                    <th>Question</th>
+                    <th>Answer</th>
+                    <th style="width:120px">Write answer</th>
+                    <th style="width:120px">Erase answer</th>
+                    <th style="width:120px">Erase</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in args %}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.key_word}}</td>
+                        <td>{{i.question}}</td>
+                        <td>{{i.answer}}</td>
+                        <td>
+                            {% if i.answer == "no answer" %}
+                                <form action="/answer" method="get">
+                                    <input autocomplete="off" class="mx-auto" name="answer" type="text" size="30">
+                                    <input name="id" type="hidden" value="{{i.id}}">
+                                    <input class="mt-2" type="submit" value="...">
+                                </form>
+                            {% else %}
+                                <!-- <form action="/answer" method="get">
+                                    <input name="id" type="hidden" value="{{i.id}}">
+                                    <input type="submit" value="*">
+                                </form> -->
+                                &#10003; &#x2713; &check;
+                            {% endif %}
+                        </td>
+                        <td>
+                            <form action="/del_ans" method="get">
+                                <input name="id" type="hidden" value="{{i.id}}">
+                                <input type="submit" value="...x">
+                            </form>
+                        </td><td>
+                            <form action="/erase" method="get">
+                                <input name="id" type="hidden" value="{{i.id}}">
+                                <input type="submit" value="X">
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

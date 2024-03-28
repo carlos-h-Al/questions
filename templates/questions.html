@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1>Query Handler</h1>
+</div>
+<p>Write your query</p>
+<form action="/add" method="post">
+    <div class="mb-3 mt-5">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="question" name="question" placeholder="Write query" type="text" size="70">
+        <label for="keyword" class="mt-5">Choose category</label>
+            <select class="m-3" name="keyword" id="keyword">
+                <option disabled selected>Category</option>
+                {% for k in keywords%}
+                <option value="{{k}}">{{k}}</option>
+                {% endfor %}
+            </select>
+    <button class="btn btn-primary" type="submit">Add</button>
+    </div>
+</form>
+
+<button class="btn btn-primary mt-5" type="submit" onclick="window.location.href='/';">Home</button>
+
+
+{% endblock %}

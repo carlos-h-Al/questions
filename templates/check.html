@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="container">
+        <p>
+            Are you sure you want to submit your question?
+        </p>
+        <form method="get" action="/add">
+            <input type="submit" value="Submit" name="action1">
+        </form>
+        <form method="get" action="/">
+            <input type="submit" value="No, go back" name="action2">
+        </form>
+
+    </div>
+
+{% endblock %}

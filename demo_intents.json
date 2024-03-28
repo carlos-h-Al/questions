@@ -1,0 +1,97 @@
+{
+    "intents" : [
+        {
+            "tag" : "counting",
+            "pattern1" : [
+                # tubes not matching
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "pattern2" : [
+                # DSCs not matching
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "pattern3" : [
+                # discard not matching
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "pattern4" : [
+                # blood pack not matching 01s (delivery note VS reconciliation)
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "pattern5" : [
+                # DINs count (not matching 13)
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "pattern6" : [
+                # reconciliation note count not matching the DSCs count
+
+                "tubes do not match 01 and packs in bags - morning/evening",
+                "discards not matching at the end of the day",
+                "Missing DHC at the end of reconciliation",
+                "what to do if I got a missing bag",
+                "01 DSCs dont match blood packs",
+                "blood packs dont match sample tubes",
+                "blood packs not matching 01s"
+            ],
+            "responses" : [
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " "
+            ]
+        },
+        {
+            "tag" : "din",
+            "pattern" : [
+                " ",
+                " ",
+                " ",
+                " "
+            ],
+            "responses" : [
+                " ",
+                " ",
+                " ",
+                " "
+            ]
+        }
+    ]
+}

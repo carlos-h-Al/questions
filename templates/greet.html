@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="container">
+        <p>Welcome to the questionaire</p>
+    </div>
+    <div class="container">
+        <form action="/" method="get">
+            <input id="home" type="submit" value="Homepage">
+        </form>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Question</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for q in questions %}
+                <tr>
+                    <td>{{q.id}}</td>
+                    <td>{{q.question}}</td>
+                    <td>
+                        <form action="/erase" method="get">
+                            <input name="id" type="hidden" value="{{q.id}}">
+                            <input type="submit" value="Erase">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

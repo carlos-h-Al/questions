@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<div class="container">
+    <h1>Query Handler</h1>
+</div>
+<p>Write your answer</p>
+<form action="/answer">
+    <div class="mb-3 mt-5">
+
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" value="{{query}}" type="text" size="70">
+
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-5" id="answer" name="answer" placeholder="Write answer" type="text" size="70">
+
+        <label for="keyword" class="mt-5">Choose question</label>
+        <select class="m-3" name="ID" id="ID">
+            <option disabled selected>Question</option>
+            {% for q in id%}
+            <option value="{{q}}">{{q.id}}</option>
+            {% endfor %}
+        </select>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+    </div>
+</form>
+
+
+{% endblock %}
